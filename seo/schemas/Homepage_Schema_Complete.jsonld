@@ -1,0 +1,162 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.sawlatours.com/#website",
+      "url": "https://www.sawlatours.com",
+      "name": "Sawla Tours",
+      "description": "Ethiopia's premier boutique tour operator. Tailor-made journeys since 2009.",
+      "publisher": {
+        "@id": "https://www.sawlatours.com/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.sawlatours.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": ["TravelAgency", "LocalBusiness", "Organization"],
+      "@id": "https://www.sawlatours.com/#organization",
+      "name": "Sawla Tours",
+      "alternateName": ["Sawla Tours Ethiopia", "Ethio Renaissance Tours"],
+      "url": "https://www.sawlatours.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.sawlatours.com/images/sawla-tours-logo.png",
+        "width": 300,
+        "height": 100
+      },
+      "image": "https://www.sawlatours.com/images/sawla-tours-og.jpg",
+      "description": "Boutique Ethiopia tour operator specialising in tailor-made private journeys. Heritage pilgrimages, tribal encounters, wildlife safaris, frontier adventures, and Cinematic Journeys with Sawla Films. Licensed and operating since 2009.",
+      "foundingDate": "2009",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Addis Ababa",
+        "addressCountry": "ET",
+        "streetAddress": "Bole Sub-City"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 9.0320,
+        "longitude": 38.7469
+      },
+      "telephone": "+251705783060",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+251705783060",
+          "contactType": "customer service",
+          "availableLanguage": ["English", "Amharic"]
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+251970578306",
+          "contactType": "customer service",
+          "contactOption": "WhatsApp",
+          "availableLanguage": ["English", "Amharic"]
+        }
+      ],
+      "email": "explore@sawlatours.com",
+      "sameAs": [
+        "https://www.instagram.com/sawlatours",
+        "https://www.facebook.com/sawlatours",
+        "https://www.youtube.com/@sawlafilms",
+        "https://www.ethiopiafilmfixer.com"
+      ],
+      "areaServed": {
+        "@type": "Country",
+        "name": "Ethiopia"
+      },
+      "priceRange": "$$$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Ethiopia Tour Itineraries",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "TouristTrip", "name": "Heritage Pilgrimage — Northern Ethiopia Circuit" } },
+          { "@type": "Offer", "itemOffered": { "@type": "TouristTrip", "name": "Tribal Encounters — Omo Valley" } },
+          { "@type": "Offer", "itemOffered": { "@type": "TouristTrip", "name": "Frontier Adventure — Danakil Depression" } },
+          { "@type": "Offer", "itemOffered": { "@type": "TouristTrip", "name": "Wildlife & Birding — Bale Mountains" } },
+          { "@type": "Offer", "itemOffered": { "@type": "TouristTrip", "name": "Festival Immersion — Timkat & Meskel" } },
+          { "@type": "Offer", "itemOffered": { "@type": "TouristTrip", "name": "Cinematic Journey — Sawla Films" } }
+        ]
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.sawlatours.com/#webpage",
+      "url": "https://www.sawlatours.com",
+      "name": "Sawla Tours — Boutique Ethiopia Travel Specialists Since 2009",
+      "description": "Private, tailor-made journeys through Ethiopia designed by specialists who have spent their lives here.",
+      "isPartOf": { "@id": "https://www.sawlatours.com/#website" },
+      "about": { "@id": "https://www.sawlatours.com/#organization" },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.sawlatours.com" }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.sawlatours.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "When is the best time to visit Ethiopia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The main dry season runs from October to June, with October-February being optimal for most destinations. The Danakil Depression should only be visited November-February. The rainy season (June-September) makes some roads impassable but brings lower prices and fewer crowds."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a visa to visit Ethiopia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most nationalities can apply for an Ethiopian e-Visa online at www.evisa.gov.et. Processing typically takes 3-5 business days. Sawla Tours provides detailed visa guidance as part of every booking."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Ethiopia safe for tourists?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The main tourist circuits — Lalibela, Gondar, Axum, Simien Mountains, Addis Ababa — are safe and visited by thousands of international tourists each year. Sawla Tours monitors conditions continuously and only operates in areas with confirmed stable security. All itineraries are designed with safety as the primary constraint."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What vaccinations do I need for Ethiopia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yellow fever vaccination is required if arriving from a yellow fever endemic country and recommended for all visitors. Hepatitis A and B, typhoid, and routine vaccinations are recommended. Malaria prophylaxis is required for low-altitude areas including the Omo Valley, Gambella, and Danakil. Sawla Tours provides a comprehensive health brief with every booking."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I see Ethiopian wolves in the wild?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The Bale Mountains National Park holds approximately 300 Ethiopian wolves — the world's largest single population. In the Web Valley and Sanetti Plateau, wolf sightings are reliable year-round. Our guides know individual animals by name. The best time is dawn, when wolves are actively hunting giant mole rats."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How far in advance should I book an Ethiopia tour?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For festival periods (Timkat in January, Meskel in September) and peak season (October-January), we recommend booking 6-9 months in advance as accommodation in Lalibela and the Simien Mountains fills early. For other periods, 2-3 months is usually sufficient. We can sometimes accommodate shorter notice bookings — contact us to discuss."
+          }
+        }
+      ]
+    }
+  ]
+}

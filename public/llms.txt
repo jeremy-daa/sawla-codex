@@ -1,0 +1,35 @@
+# Sawla Tours
+
+> Bespoke Ethiopia tours designed by Addis Ababa specialists. Sawla Tours creates private cultural, historic, wildlife, photography, trekking and expedition journeys across Ethiopia.
+
+## Primary site
+- https://www.sawlatours.com/
+
+## AI / LLM discovery resources
+- https://www.sawlatours.com/ai-index.json
+- https://www.sawlatours.com/sitemap.xml
+
+## Core commercial pages
+- https://www.sawlatours.com/tours-by-experience
+- https://www.sawlatours.com/trip-finder
+- https://www.sawlatours.com/enquire
+- https://www.sawlatours.com/ethiopias-popular-destinations
+
+## Main expertise entities
+- Lalibela private tours
+- Omo Valley cultural journeys
+- Danakil Depression expeditions
+- Simien Mountains trekking and gelada photography
+- Bale Mountains wildlife and Ethiopian wolf viewing
+- Tigray churches and community trekking
+- Ethiopia photography tours
+- Ethiopia field guides and travel planning
+- Responsible travel in Ethiopia
+
+## Brand positioning
+Sawla Tours is positioned as a premium, field-led Ethiopian tour operator with Sawla Films cinematic field knowledge, specialist guiding, private route design and culturally respectful travel planning.
+
+## Contact
+- Email: explore@sawlatours.com
+- WhatsApp: +251 970 578 306
+- Base: Addis Ababa, Ethiopia

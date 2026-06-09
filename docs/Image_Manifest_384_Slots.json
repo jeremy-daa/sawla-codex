@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "total_slots": 384,
+    "generated": "June 2026",
+    "instructions": "Replace placeholder URLs with real Sawla Films images. Maintain naming convention exactly."
+  },
+  "naming_convention": {
+    "destinations": "dest-[slug]-[type].jpg",
+    "tours": "tour-[style]-[slug]-[type].jpg",
+    "species": "species-[slug]-[type].jpg",
+    "guides": "guide-[slug]-[type].jpg",
+    "moments": "moments-[slug]-[type].jpg",
+    "about": "about-[name]-[type].jpg",
+    "home": "home-[section]-[type].jpg",
+    "types": ["hero (1920x1080)", "gallery-1 (1200x800)", "gallery-2 (1200x800)", "portrait (800x800)", "thumb (400x300)"]
+  },
+  "priority_order": {
+    "1_critical": "Homepage hero video/image + team headshots",
+    "2_high": "Lalibela, Simien Mountains, Danakil, Omo Valley, Bale Mountains hero images",
+    "3_medium": "All other destination heroes + species portraits",
+    "4_ongoing": "Gallery images, guide photos, moments article heroes"
+  },
+  "homepage": [
+    { "slot": "home-hero-main.jpg", "dimensions": "1920x1080", "description": "Cinematic Ethiopia hero — replaced by video when ready", "priority": "CRITICAL" },
+    { "slot": "home-hero-poster.jpg", "dimensions": "1920x1080", "description": "Video poster frame — shown while video loads", "priority": "CRITICAL" }
+  ],
+  "destinations": [
+    { "slug": "lalibela", "slots": [
+      { "filename": "dest-lalibela-hero.jpg", "dimensions": "1920x1080", "alt": "Rock-hewn churches of Lalibela, Ethiopia at dawn", "priority": "CRITICAL" },
+      { "filename": "dest-lalibela-bet-giyorgis.jpg", "dimensions": "1200x800", "alt": "Bet Giyorgis church, Lalibela — cross-shaped monolithic church", "priority": "HIGH" },
+      { "filename": "dest-lalibela-interior.jpg", "dimensions": "1200x800", "alt": "Interior of Bet Maryam church, Lalibela", "priority": "HIGH" },
+      { "filename": "dest-lalibela-timkat.jpg", "dimensions": "1200x800", "alt": "Timkat festival procession, Lalibela", "priority": "MEDIUM" },
+      { "filename": "dest-lalibela-aerial.jpg", "dimensions": "1920x1080", "alt": "Aerial view of Lalibela rock churches complex", "priority": "MEDIUM" }
+    ]},
+    { "slug": "simien-mountains", "slots": [
+      { "filename": "dest-simien-hero.jpg", "dimensions": "1920x1080", "alt": "Simien Mountains escarpment at sunrise, Ethiopia", "priority": "CRITICAL" },
+      { "filename": "dest-simien-gelada-herd.jpg", "dimensions": "1200x800", "alt": "Gelada baboon herd on Simien Mountains plateau", "priority": "HIGH" },
+      { "filename": "dest-simien-escarpment.jpg", "dimensions": "1920x1080", "alt": "Simien Mountains cliff face dropping 1500m to valley floor", "priority": "HIGH" },
+      { "filename": "dest-simien-walia-ibex.jpg", "dimensions": "1200x800", "alt": "Walia ibex on Simien Mountains rocks", "priority": "MEDIUM" },
+      { "filename": "dest-simien-camp.jpg", "dimensions": "1200x800", "alt": "Camping on the Simien escarpment at 3600m", "priority": "MEDIUM" }
+    ]},
+    { "slug": "danakil-depression", "slots": [
+      { "filename": "dest-danakil-hero.jpg", "dimensions": "1920x1080", "alt": "Danakil Depression volcanic landscape, Ethiopia", "priority": "CRITICAL" },
+      { "filename": "dest-danakil-erta-ale.jpg", "dimensions": "1200x800", "alt": "Erta Ale lava lake at night, Danakil Depression", "priority": "HIGH" },
+      { "filename": "dest-danakil-dallol.jpg", "dimensions": "1200x800", "alt": "Dallol sulphur springs, Danakil — yellow and green mineral formations", "priority": "HIGH" },
+      { "filename": "dest-danakil-salt-caravans.jpg", "dimensions": "1200x800", "alt": "Afar salt camel caravan, Danakil salt flats", "priority": "MEDIUM" },
+      { "filename": "dest-danakil-lava-lake-close.jpg", "dimensions": "1200x800", "alt": "Close view of Erta Ale active lava lake", "priority": "MEDIUM" }
+    ]},
+    { "slug": "omo-valley", "slots": [
+      { "filename": "dest-omo-hero.jpg", "dimensions": "1920x1080", "alt": "Omo Valley tribal cultures, Southern Ethiopia", "priority": "CRITICAL" },
+      { "filename": "dest-omo-mursi.jpg", "dimensions": "1200x800", "alt": "Mursi woman with clay lip plate, Omo Valley Ethiopia", "priority": "HIGH" },
+      { "filename": "dest-omo-hamer.jpg", "dimensions": "1200x800", "alt": "Hamer people at Key Afer market, Omo Valley", "priority": "HIGH" },
+      { "filename": "dest-omo-karo.jpg", "dimensions": "1200x800", "alt": "Karo people with body paint, Omo Valley", "priority": "MEDIUM" },
+      { "filename": "dest-omo-river.jpg", "dimensions": "1920x1080", "alt": "Omo River, Southern Ethiopia", "priority": "MEDIUM" }
+    ]},
+    { "slug": "bale-mountains", "slots": [
+      { "filename": "dest-bale-hero.jpg", "dimensions": "1920x1080", "alt": "Bale Mountains National Park, Ethiopia — Afroalpine moorland", "priority": "CRITICAL" },
+      { "filename": "dest-bale-wolf.jpg", "dimensions": "1200x800", "alt": "Ethiopian wolf hunting at dawn, Bale Mountains Web Valley", "priority": "HIGH" },
+      { "filename": "dest-bale-sanetti.jpg", "dimensions": "1920x1080", "alt": "Sanetti Plateau, Bale Mountains — giant lobelia plants", "priority": "HIGH" },
+      { "filename": "dest-bale-nyala.jpg", "dimensions": "1200x800", "alt": "Mountain nyala at Dinsho, Bale Mountains", "priority": "MEDIUM" },
+      { "filename": "dest-bale-harenna.jpg", "dimensions": "1200x800", "alt": "Harenna Forest, Bale Mountains — montane cloud forest", "priority": "MEDIUM" }
+    ]},
+    { "slug": "gondar", "slots": [
+      { "filename": "dest-gondar-hero.jpg", "dimensions": "1920x1080", "alt": "Fasilides Castle, Royal Enclosure, Gondar Ethiopia", "priority": "HIGH" },
+      { "filename": "dest-gondar-debre-berhan.jpg", "dimensions": "1200x800", "alt": "Angel ceiling, Debre Berhan Selassie church, Gondar", "priority": "HIGH" },
+      { "filename": "dest-gondar-timkat-bath.jpg", "dimensions": "1200x800", "alt": "Fasilides Bath flooded for Timkat, Gondar Ethiopia", "priority": "MEDIUM" }
+    ]},
+    { "slug": "axum", "slots": [
+      { "filename": "dest-axum-hero.jpg", "dimensions": "1920x1080", "alt": "Great Stelae field, Axum Ethiopia at dawn", "priority": "HIGH" },
+      { "filename": "dest-axum-obelisks.jpg", "dimensions": "1200x800", "alt": "Ancient obelisks, Axum stelae field", "priority": "HIGH" },
+      { "filename": "dest-axum-church.jpg", "dimensions": "1200x800", "alt": "St Mary of Zion church, Axum Ethiopia", "priority": "MEDIUM" }
+    ]},
+    { "slug": "harar", "slots": [
+      { "filename": "dest-harar-hero.jpg", "dimensions": "1920x1080", "alt": "Harar walled city, Eastern Ethiopia — Jugol old town", "priority": "HIGH" },
+      { "filename": "dest-harar-hyenas.jpg", "dimensions": "1200x800", "alt": "Harar hyena feeding ritual — man feeding wild hyena", "priority": "HIGH" },
+      { "filename": "dest-harar-streets.jpg", "dimensions": "1200x800", "alt": "Narrow streets of Harar old city", "priority": "MEDIUM" }
+    ]}
+  ],
+  "species": [
+    { "slug": "ethiopian-wolf", "slots": [
+      { "filename": "species-wolf-portrait.jpg", "dimensions": "800x800", "alt": "Ethiopian wolf portrait — Canis simensis, Bale Mountains", "priority": "CRITICAL" },
+      { "filename": "species-wolf-hunting.jpg", "dimensions": "1200x800", "alt": "Ethiopian wolf hunting giant mole rat, Web Valley", "priority": "HIGH" },
+      { "filename": "species-wolf-landscape.jpg", "dimensions": "1920x1080", "alt": "Ethiopian wolf on Sanetti Plateau, Bale Mountains", "priority": "HIGH" }
+    ]},
+    { "slug": "gelada-baboon", "slots": [
+      { "filename": "species-gelada-portrait.jpg", "dimensions": "800x800", "alt": "Gelada baboon portrait — red chest patch, Simien Mountains", "priority": "CRITICAL" },
+      { "filename": "species-gelada-herd.jpg", "dimensions": "1920x1080", "alt": "Gelada baboon herd of 500+ on Simien escarpment", "priority": "HIGH" },
+      { "filename": "species-gelada-cliff.jpg", "dimensions": "1200x800", "alt": "Gelada baboons sleeping on Simien cliff edge", "priority": "MEDIUM" }
+    ]},
+    { "slug": "walia-ibex", "slots": [
+      { "filename": "species-walia-portrait.jpg", "dimensions": "800x800", "alt": "Walia ibex portrait — endemic to Simien Mountains", "priority": "HIGH" },
+      { "filename": "species-walia-cliff.jpg", "dimensions": "1200x800", "alt": "Walia ibex on Simien Mountains cliff face", "priority": "HIGH" }
+    ]},
+    { "slug": "mountain-nyala", "slots": [
+      { "filename": "species-nyala-portrait.jpg", "dimensions": "800x800", "alt": "Mountain nyala portrait — endemic Ethiopia highland antelope", "priority": "HIGH" },
+      { "filename": "species-nyala-dinsho.jpg", "dimensions": "1200x800", "alt": "Mountain nyala at Dinsho, Bale Mountains National Park", "priority": "MEDIUM" }
+    ]}
+  ],
+  "about": [
+    { "filename": "about-team-group.jpg", "dimensions": "1200x800", "alt": "Sawla Tours team, Addis Ababa", "priority": "HIGH" },
+    { "filename": "about-bemnet-portrait.jpg", "dimensions": "800x800", "alt": "Bemnet Alemu, Founder, Sawla Tours", "priority": "CRITICAL" },
+    { "filename": "about-vehicle-fleet.jpg", "dimensions": "1200x800", "alt": "Sawla Tours 4x4 fleet, Addis Ababa", "priority": "MEDIUM" },
+    { "filename": "about-camp-setup.jpg", "dimensions": "1200x800", "alt": "Sawla Tours mobile tented camp in Ethiopian highlands", "priority": "HIGH" }
+  ],
+  "moments": [
+    { "slug": "gelada-monkey-simien-mountains", "slots": [
+      { "filename": "moments-gelada-hero.jpg", "dimensions": "1920x1080", "alt": "800 gelada monkeys on Simien escarpment at dawn", "priority": "HIGH" }
+    ]},
+    { "slug": "why-ethiopia-not-safari-destination", "slots": [
+      { "filename": "moments-perspective-hero.jpg", "dimensions": "1920x1080", "alt": "Ethiopia landscape — not a safari destination", "priority": "HIGH" }
+    ]},
+    { "slug": "how-we-plan-custom-ethiopia-journey", "slots": [
+      { "filename": "moments-process-hero.jpg", "dimensions": "1920x1080", "alt": "Planning a custom Ethiopia journey with Sawla Tours", "priority": "HIGH" }
+    ]}
+  ]
+}

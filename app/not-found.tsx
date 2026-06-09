@@ -1,0 +1,3 @@
+import Link from 'next/link'
+
+export default function NotFound(){return <section className="flex min-h-screen items-center bg-volcanic px-6 text-ivory"><div className="mx-auto max-w-2xl text-center"><p className="label-eyebrow">404</p><h1 className="mt-6 font-display text-display-lg font-light">This route has wandered off the map.</h1><p className="mt-6 font-body text-ivory/50">Return to the destination index or start a private journey.</p><div className="mt-9 flex justify-center gap-4"><Link href="/ethiopias-popular-destinations" className="btn-primary-ivory">Destinations</Link><Link href="/enquire" className="btn-ghost-light">Enquire</Link></div></div></section>}

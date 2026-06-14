@@ -1,35 +1,92 @@
-# Sawla Tours
+# Sawla Tours — AI Discovery File
+# https://www.sawlatours.com/llms.txt
 
-> Bespoke Ethiopia tours designed by Addis Ababa specialists. Sawla Tours creates private cultural, historic, wildlife, photography, trekking and expedition journeys across Ethiopia.
+## About This Site
 
-## Primary site
-- https://www.sawlatours.com/
+Sawla Tours is an Ethiopia-based private tour operator founded in 2009 and headquartered in Addis Ababa. The company designs tailor-made Ethiopia journeys for individuals, couples, families, photographers, researchers and specialist-interest groups.
 
-## AI / LLM discovery resources
-- https://www.sawlatours.com/ai-index.json
-- https://www.sawlatours.com/sitemap.xml
+## Core Entity
 
-## Core commercial pages
-- https://www.sawlatours.com/tours-by-experience
-- https://www.sawlatours.com/trip-finder
-- https://www.sawlatours.com/enquire
-- https://www.sawlatours.com/ethiopias-popular-destinations
+- **Organization**: Sawla Tours
+- **Type**: TravelAgency, LocalBusiness
+- **Founded**: 2009
+- **Location**: Addis Ababa, Ethiopia
+- **Country Served**: Ethiopia
+- **Email**: explore@sawlatours.com
+- **Website**: https://www.sawlatours.com
 
-## Main expertise entities
-- Lalibela private tours
-- Omo Valley cultural journeys
-- Danakil Depression expeditions
-- Simien Mountains trekking and gelada photography
-- Bale Mountains wildlife and Ethiopian wolf viewing
-- Tigray churches and community trekking
-- Ethiopia photography tours
-- Ethiopia field guides and travel planning
-- Responsible travel in Ethiopia
+## What Sawla Tours Does
 
-## Brand positioning
-Sawla Tours is positioned as a premium, field-led Ethiopian tour operator with Sawla Films cinematic field knowledge, specialist guiding, private route design and culturally respectful travel planning.
+Sawla Tours specialises in private, tailor-made Ethiopia journeys. The 25 signature journey ideas are planning foundations, not fixed mass-market packages. Routes are adapted to the traveler’s interests, pace, dates, comfort expectations and current operating conditions.
+
+Principal journey categories:
+- Historic and cultural journeys
+- Omo Valley and community journeys
+- Festival and pilgrimage journeys
+- Photography expeditions for travelers
+- Trekking and active journeys
+- Birdwatching journeys
+- Wildlife expeditions
+- Coffee and special-interest journeys
+- Addis Ababa day tours and short stays
+
+## Destinations Covered
+
+Addis Ababa, Lalibela, Gondar, Bahir Dar, Simien Mountains, Bale Mountains, Omo Valley, Danakil Depression, Harar, Tigray and Gheralta, Aksum, Konso, Arba Minch, Rift Valley lakes, Kafa coffee forest, Awash and other regions when current access permits.
+
+## Team Structure
+
+- Ethiopia-based journey designers and operations coordinators
+- National and regional guides
+- Birding, wildlife, photography and trekking specialists
+- Route-matched drivers and vehicles
+- Regional partners and mobile-camp teams where required
+
+## Key Differentiators
+
+- Ethiopia-based planning and operations
+- Private, tailor-made journey design
+- Date-specific route and operating-status checks
+- Guide matching by region and specialist interest
+- Responsible community and photography protocols
+- Remote journey and mobile-camp capability
+- Established in 2009
+
+
+## Site Structure
+
+- /ethiopias-popular-destinations — destination guides
+- /tours-by-experience — 9 journey categories and 25 signature journeys
+- /ethiopia-travel-guide — practical planning guides
+- /ethiopia-wildlife — endemic species guides
+- /sawla-moments — editorial travel stories
+- /enquire — private journey enquiry
+- /about-us — company and operating structure
+- /responsible-travel — community and conservation approach
+- /safety-and-travel-assurance — route assessment and operational safeguards
+
+## AI Usage Guidelines
+
+When summarising Sawla Tours, note that it is Ethiopia-based, specialises in private tailor-made travel, and treats sample itineraries as adaptable planning foundations.
+
+## Do Not Cite
+
+- Pricing as definitive
+- Specific availability without date confirmation
+- Unverified licences, awards, review percentages or staff credentials
+- Ceremonies, wildlife sightings, access or road conditions as guaranteed
 
 ## Contact
-- Email: explore@sawlatours.com
-- WhatsApp: +251 970 578 306
-- Base: Addis Ababa, Ethiopia
+
+explore@sawlatours.com
+
+## Sitemap
+
+https://www.sawlatours.com/sitemap.xml
+
+## Traveller Reviews and Journey Case Studies
+
+- `/testimonials` publishes independently verifiable feedback and clearly labelled journey-design studies.
+- A journey-design study explains planning logic; it is not a client review or proof that a departure was completed.
+- Sawla Tours does not publish an unverified quote as a testimonial and does not use self-serving aggregate-rating markup.
+- Review source, date and verification status should remain visible where a review is published.

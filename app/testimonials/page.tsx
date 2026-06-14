@@ -1,95 +1,133 @@
 import type { Metadata } from 'next'
-import { buildMetadata } from '@/lib/seo'
 import Link from 'next/link'
-import { testimonials, tourStyles } from '@/data/siteData'
-import Arrow from '@/components/ui/Arrow'
+import HubHero from '@/components/hubs/HubHero'
+import HubAnchorNav from '@/components/hubs/HubAnchorNav'
+import HubEvidenceBar from '@/components/hubs/HubEvidenceBar'
+import HubSectionHeader from '@/components/hubs/HubSectionHeader'
+import HubCTA from '@/components/hubs/HubCTA'
 import SchemaScript from '@/components/ui/SchemaScript'
-import { graphSchema, itemListSchema, webPageSchema } from '@/lib/schema'
+import VerifiedReviewCard from '@/components/stories/VerifiedReviewCard'
+import StoryCard from '@/components/stories/StoryCard'
+import { JOURNEY_CASE_STUDIES, VERIFIED_PUBLIC_REVIEWS } from '@/data/stories'
+import { breadcrumbSchema, collectionPageSchema, itemListSchema } from '@/lib/schema'
 
-export const metadata: Metadata = buildMetadata({
-  title: 'Sawla Tours Reviews',
-  description: 'Read traveller reviews for Sawla Tours Ethiopia journeys across Lalibela, Omo Valley, Danakil, Simien, Bale and photography trips.',
-  path: '/testimonials',
-  keywords: ['Sawla Tours reviews', 'Ethiopia tour reviews', 'Ethiopia travel testimonials', 'private Ethiopia tours', 'Sawla Tours testimonials'],
-})
+export const metadata: Metadata = {
+  title: 'Traveller Reviews & Ethiopia Journey Case Studies | Sawla Tours',
+  description: 'Read independently sourced traveler feedback and transparent Ethiopia journey-design case studies. Verified reviews are separated clearly from editorial planning examples.',
+  alternates: { canonical: 'https://www.sawlatours.com/testimonials' },
+  openGraph: {
+    title: 'Traveller Reviews & Journey Case Studies | Sawla Tours',
+    description: 'Evidence-led reviews and transparent planning studies from Sawla Tours.',
+    url: 'https://www.sawlatours.com/testimonials',
+    type: 'website',
+    images: [{ url: '/images/og-home.jpg', width: 1200, height: 630, alt: 'Sawla Tours traveler stories and journey design studies' }],
+  },
+}
+
+const verifiedStories = JOURNEY_CASE_STUDIES.filter((story) => story.type === 'verified-client-story')
+const planningStudies = JOURNEY_CASE_STUDIES.filter((story) => story.type === 'journey-design-study')
+const schema = [
+  collectionPageSchema({
+    name: 'Traveller reviews and Ethiopia journey case studies',
+    url: 'https://www.sawlatours.com/testimonials',
+    description: 'Independently sourced traveler feedback and transparent journey-design case studies, clearly separated by evidence status.',
+  }),
+  breadcrumbSchema([
+    { name: 'Home', url: 'https://www.sawlatours.com' },
+    { name: 'Traveller stories', url: 'https://www.sawlatours.com/testimonials' },
+  ]),
+  itemListSchema({
+    name: 'Sawla Tours traveler stories and journey case studies',
+    url: 'https://www.sawlatours.com/testimonials',
+    items: JOURNEY_CASE_STUDIES.map((story) => ({ name: story.title, url: story.seo.canonical, description: story.dek })),
+  }),
+]
 
 export default function TestimonialsPage() {
-  const schema = graphSchema([
-    webPageSchema({ path: '/testimonials', name: 'Sawla Tours Reviews', description: 'Traveller stories and testimonials for Sawla Tours private Ethiopia journeys.' }),
-    itemListSchema({ name: 'Sawla Tours traveller testimonials', path: '/testimonials', items: testimonials.map((t) => ({ name: `${t.name} — ${t.tour}`, url: '/testimonials' })) }),
-    {
-      '@type': 'TravelAgency',
-      '@id': 'https://www.sawlatours.com/#organization',
-      review: testimonials.slice(0, 10).map((t) => ({
-        '@type': 'Review',
-        reviewRating: { '@type': 'Rating', ratingValue: t.rating, bestRating: 5 },
-        author: { '@type': 'Person', name: t.name },
-        reviewBody: t.text,
-        itemReviewed: { '@id': 'https://www.sawlatours.com/#organization' },
-      })),
-    },
-  ])
-
   return (
     <>
-      <SchemaScript data={schema} />
-      <section className="bg-volcanic px-6 pb-24 pt-44 text-ivory md:px-12 md:pt-52">
-        <div className="mx-auto max-w-container">
-          <p className="label-eyebrow">Traveller proof</p>
-          <h1 className="mt-6 max-w-5xl font-display text-display-xl font-light leading-none">Reviews that show the field reality.</h1>
-          <p className="mt-8 max-w-2xl font-body text-body-md text-ivory/60">A premium Ethiopia website needs trust architecture, not decorative praise. These traveller stories are mapped by journey type, country and field experience so visitors can see the kind of care Sawla Tours provides.</p>
-        </div>
-      </section>
+      {schema.map((item, index) => <SchemaScript key={index} schema={item} />)}
+      <HubHero
+        eyebrow="Evidence before promotion"
+        title="Traveller feedback and the decisions behind a journey"
+        intro="Independent reviews are linked to their source. Editorial planning studies are labelled clearly and never presented as client testimony."
+        breadcrumb="Traveller Stories"
+        image="traveller-stories-hub-hero.jpg"
+        imageAlt="Travelers and local guide sharing an Ethiopia journey"
+        category="about"
+        primary={{ href: '#verified', label: 'Read verified feedback' }}
+        secondary={{ href: '#case-studies', label: 'Explore case studies' }}
+        facts={[
+          { value: String(VERIFIED_PUBLIC_REVIEWS.length), label: 'independently sourced review' },
+          { value: String(JOURNEY_CASE_STUDIES.length), label: 'published case studies' },
+          { value: 'No evidence', label: 'no testimonial' },
+          { value: 'No rating schema', label: 'self-serving stars avoided' },
+        ]}
+      />
+      <HubEvidenceBar items={[
+        { title: 'Source-linked', body: 'External reviews connect to the original platform' },
+        { title: 'Consent-controlled', body: 'Direct feedback is not published without permission' },
+        { title: 'Clearly classified', body: 'Client stories and editorial studies are separated' },
+        { title: 'No invented totals', body: 'No unsupported score, percentage or review count' },
+      ]} />
+      <HubAnchorNav items={[
+        { href: '#verified', label: 'Verified feedback' },
+        { href: '#case-studies', label: 'Case studies' },
+        { href: '#standard', label: 'Publication standard' },
+        { href: '#use-stories', label: 'How to use these stories' },
+      ]} />
 
-      <section className="bg-ivory py-16">
-        <div className="container-max grid gap-px bg-volcanic/10 md:grid-cols-4">
-          {[['15', 'curated reviews'], ['5.0', 'average rating'], ['8+', 'travel styles'], ['500+', 'custom journeys']].map(([value, label]) => (
-            <div key={label} className="bg-ivory p-7 text-center">
-              <p className="font-display text-5xl text-volcanic">{value}</p>
-              <p className="mt-2 font-body text-[0.62rem] uppercase tracking-[0.18em] text-warmgrey">{label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="section-padding bg-ivory">
+      <section id="verified" className="section-padding scroll-mt-32 bg-ivory" aria-labelledby="verified-heading">
         <div className="container-max">
-          <div className="grid gap-6 lg:grid-cols-3">
-            {testimonials.map((t) => (
-              <blockquote key={t.id} className="border border-volcanic/10 bg-white/40 p-8 transition duration-500 hover:-translate-y-1 hover:border-gold/50 hover:bg-gold-faint">
-                <div className="mb-8 font-body text-[0.7rem] uppercase tracking-[0.18em] text-gold">★★★★★ · {t.tour}</div>
-                <p className="font-display text-2xl font-light leading-9 text-volcanic">“{t.text}”</p>
-                <footer className="mt-8 font-body text-sm text-warmgrey">{t.name} · {t.country} · {t.year}</footer>
-              </blockquote>
-            ))}
+          <HubSectionHeader eyebrow="Independently verifiable" title="Published traveller feedback" intro="The review below remains on its original platform. Sawla reproduces only a short excerpt and summarizes the relevant journey context." />
+          <div className="mt-10 max-w-4xl">
+            {VERIFIED_PUBLIC_REVIEWS.map((review) => <VerifiedReviewCard key={review.id} review={review} />)}
+          </div>
+          {verifiedStories.length > 0 && (
+            <div className="mt-8 grid gap-6 md:grid-cols-2">
+              {verifiedStories.map((story) => <StoryCard key={story.slug} story={story} />)}
+            </div>
+          )}
+        </div>
+      </section>
+
+      <section id="case-studies" className="section-padding scroll-mt-32 bg-white" aria-labelledby="studies-heading">
+        <div className="container-max">
+          <HubSectionHeader eyebrow="Planning made visible" title="Journey-design case studies" intro="These studies explain route decisions, safeguards and trade-offs. They demonstrate method, not client endorsement." />
+          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {planningStudies.map((story) => <StoryCard key={story.slug} story={story} />)}
           </div>
         </div>
       </section>
 
-      <section className="section-padding bg-volcanic text-ivory">
-        <div className="container-max grid gap-12 lg:grid-cols-[0.8fr_1fr]">
+      <section id="standard" className="section-padding scroll-mt-32 bg-charcoal text-ivory" aria-labelledby="standard-heading">
+        <div className="container-max grid gap-12 lg:grid-cols-[.75fr_1.25fr]">
           <div>
-            <p className="label-eyebrow">Find the closest match</p>
-            <h2 className="mt-5 font-display text-display-md font-light">Reviews organised around the way you want to travel.</h2>
-            <p className="mt-6 font-body text-body-md text-ivory/60">The next production step is to connect live Trustpilot or Google reviews while preserving this editorial review architecture.</p>
+            <span className="label-eyebrow text-gold">Publication standard</span>
+            <h2 id="standard-heading" className="heading-display text-display-lg text-ivory">No evidence, no testimonial</h2>
+            <p className="mt-5 leading-8 text-ivory/68">A strong travel website should distinguish between feedback, proof and editorial storytelling. Sawla’s evidence register keeps unpublished drafts outside the public site until source and consent requirements are met.</p>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {tourStyles.map((style) => (
-              <Link key={style.slug} href={`/tours-by-experience/${style.slug}`} className="border border-ivory/10 p-6 transition duration-350 hover:border-gold hover:bg-ivory/[0.04]">
-                <p className="label-eyebrow">{style.number}</p>
-                <h3 className="mt-3 font-display text-2xl text-ivory">{style.name}</h3>
-                <p className="mt-3 font-body text-sm leading-7 text-ivory/50">{style.tagline}</p>
-              </Link>
+          <div className="grid gap-5 md:grid-cols-2">
+            {[
+              ['External review', 'Original platform link, date and conservative excerpt.'],
+              ['Direct client feedback', 'Original message retained and publication permission recorded.'],
+              ['Verified client story', 'Journey facts checked and identity or anonymity preference documented.'],
+              ['Editorial study', 'Clearly labelled as a planning example, never as a completed trip.'],
+            ].map(([title, body]) => (
+              <article key={title} className="rounded-card border border-white/12 bg-white/[.045] p-6"><h3 className="font-display text-2xl text-gold">{title}</h3><p className="mt-3 text-sm leading-6 text-ivory/65">{body}</p></article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-ivory px-6 py-24 text-center">
-        <p className="label-eyebrow">Your journey next</p>
-        <h2 className="mx-auto mt-5 max-w-3xl font-display text-display-md font-light text-volcanic">Speak with Sawla before choosing a route.</h2>
-        <Link href="/enquire" className="btn-primary-dark mt-9">Start a Private Enquiry <Arrow /></Link>
+      <section id="use-stories" className="section-padding-sm scroll-mt-32 border-y border-sand bg-gold-faint/45" aria-labelledby="use-heading">
+        <div className="container-max grid items-center gap-8 lg:grid-cols-[1fr_auto]">
+          <div><span className="label-eyebrow">Use stories carefully</span><h2 id="use-heading" className="heading-display text-display-md text-charcoal">Look for planning principles—not an identical itinerary</h2><p className="mt-4 max-w-3xl leading-7 text-warmgrey">A case study can help you ask better questions about pace, consent, field time or uncertainty. Your route still needs to be designed for your own dates and priorities.</p></div>
+          <Link href="/how-we-work" className="btn-ghost flex-none">See the planning process</Link>
+        </div>
       </section>
+
+      <HubCTA title="Create a journey worth documenting honestly" body="Tell us what matters to you. We will show the route logic, practical limits and decisions clearly before asking you to confirm anything." secondary={{ href: '/tours-by-experience', label: 'Browse journey ideas' }} />
     </>
   )
 }

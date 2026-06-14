@@ -1,163 +1,209 @@
 import type { Metadata } from 'next'
-import { buildMetadata } from '@/lib/seo'
+import Link from 'next/link'
 import SchemaScript from '@/components/ui/SchemaScript'
 
-export const metadata: Metadata = buildMetadata({
-  title: 'Ethiopia Travel FAQ',
-  description: 'Answers to Ethiopia travel questions on safety, visas, seasons, flights, Omo Valley photography, Danakil, Simien trekking and packing.',
-  path: '/faq',
-  keywords: ['Ethiopia travel FAQ', 'Ethiopia travel questions', 'Ethiopia safety', 'Ethiopia visa', 'Ethiopia packing list', 'Sawla Tours FAQ'],
-})
+export const metadata: Metadata = {
+  title: 'Frequently Asked Questions | Ethiopia Travel | Sawla Tours',
+  description: 'Answers to common questions about planning an Ethiopia trip with Sawla Tours — safety, visas, timing, private tours, guides, vehicles, and more.',
+  alternates: { canonical: 'https://www.sawlatours.com/faq' },
+}
 
-const FAQS = [
+const faqs = [
   {
-    q: 'When is the best time to visit Ethiopia?',
-    a: 'The main dry season runs October–June, with October–March being optimal for most destinations. The Danakil Depression should only be visited November–February due to extreme heat. Timkat festival (Lalibela) falls on January 19th annually — book 9–12 months ahead for this period. The rainy season (June–September) brings lower prices and dramatic green landscapes, but makes some roads impassable.',
+    category: 'Planning',
+    items: [
+      { q: 'Do I need a complete itinerary before contacting Sawla Tours?', a: 'No. You can reach out with only a rough idea — your travel month, how many days you have, your group size, and your main interests. Our team will help you understand which destinations work for your time and what kind of route makes sense.' },
+      { q: 'How quickly does Sawla Tours respond to enquiries?', a: 'We aim to acknowledge new enquiries within one business day, based on Addis Ababa time. A detailed tailor-made proposal may take longer when current access, availability or specialist services must be checked.' },
+      { q: 'Can Sawla Tours plan a private Ethiopia tour for just 2 people?', a: 'Yes. Most Sawla Tours journeys are private — designed for couples, small groups, or solo travelers. The itinerary, guide, and vehicle are dedicated to your group.' },
+      { q: 'How far in advance should I book?', a: 'For peak season (October–February), 3–6 months is ideal. For shoulder season, 6–8 weeks is generally sufficient. Festival-timed travel (Timkat in January, Meskel in September) books quickly — start planning 4–6 months ahead.' },
+    ],
   },
   {
-    q: 'Do I need a visa to visit Ethiopia?',
-    a: 'Most nationalities can apply for an Ethiopian e-Visa online at www.evisa.gov.et. Processing typically takes 3–5 business days. The tourist visa is valid for 30 days (single entry) and is extendable inside Ethiopia. Visa on arrival is available at Bole International Airport but the e-Visa is recommended to avoid queues. Sawla Tours provides detailed visa guidance specific to your nationality with every booking.',
+    category: 'Destinations & Safety',
+    items: [
+      { q: 'Is Ethiopia safe to visit?', a: 'Travel conditions in Ethiopia vary by region and date. Sawla reviews official guidance, local operating information, transport, accommodation and practical support before proposing or confirming a route. An itinerary may be changed, postponed or declined when the complete operating picture is not acceptable.' },
+      { q: 'Is the Danakil Depression safe?', a: 'Danakil travel requires a date-specific review of access, heat, volcanic conditions, vehicles, local permissions and field support. The required local arrangements can change, and Sawla proceeds only when the complete operating plan is acceptable.' },
+      { q: 'Can I visit the Omo Valley?', a: "Southern and Lower Omo travel depends on current roads, community agreements, regional conditions and enough time for respectful visits. Sawla matches the itinerary with appropriate national and local guides and does not promise access to a private home, ceremony or individual." },
+    ],
   },
   {
-    q: 'Is Ethiopia safe for tourists?',
-    a: 'The main tourist circuits — Lalibela, Gondar, Axum, Simien Mountains, Bale Mountains, Addis Ababa — are safe and visited by thousands of international tourists each year. Sawla Tours monitors conditions continuously and only operates in areas with confirmed stable security. The Danakil requires an armed escort (arranged by us) and should not be visited independently. We brief clients fully on current conditions before departure.',
+    category: 'Visas & Entry',
+    items: [
+      { q: 'Do I need a visa for Ethiopia?', a: 'Visa and entry rules depend on nationality and can change. Travelers should check the current Ethiopian government eVisa and immigration guidance before purchase; Sawla can explain the itinerary details but does not issue immigration advice.' },
+      { q: 'What vaccinations are recommended for Ethiopia?', a: 'Consult a qualified travel-health professional well before departure. Recommended vaccinations, malaria prevention and certificate requirements depend on medical history, nationality, routing and current public-health guidance; Sawla does not provide medical advice.' },
+    ],
   },
   {
-    q: 'What vaccinations do I need for Ethiopia?',
-    a: 'Yellow fever vaccination is required if arriving from a yellow fever endemic country and recommended for all visitors. Also strongly recommended: Hepatitis A and B, typhoid, and ensuring all routine vaccinations are current. Rabies pre-exposure vaccination is recommended for anyone spending time in rural areas or with animal contact. Consult your travel health clinic at least 6–8 weeks before travel.',
+    category: 'Logistics',
+    items: [
+      { q: 'Does Sawla Tours arrange domestic flights?', a: 'Yes. Domestic flights in Ethiopia are operated primarily by Ethiopian Airlines. Sawla Tours can coordinate domestic flight bookings, timing, and airport transfers as part of your itinerary. We recommend scheduling domestic flights with buffer time, as they can be delayed.' },
+      { q: 'What vehicles does Sawla Tours use?', a: 'Sawla selects a vehicle category for the route, group size, luggage and current road conditions. The final proposal states the planned standard and seating; a specific make or model is guaranteed only when confirmed in writing.' },
+      { q: 'What accommodation standards does Sawla Tours use?', a: "We work across a range from comfortable mid-range hotels to the best available lodges for each region. We are honest about what 'best available' means in remote areas — some excellent destinations have limited accommodation options. We explain this clearly during planning." },
+    ],
   },
   {
-    q: 'Is malaria a risk in Ethiopia?',
-    a: 'Malaria is present in Ethiopia below approximately 2,000 metres altitude. Prophylaxis is required for: the Omo Valley, Gambella, Danakil/Afar lowlands, Awash National Park, and any other lowland areas. The following are generally malaria-free (above 2,000m): Addis Ababa, Lalibela, Gondar, Simien Mountains, and Bale Mountains. Consult your travel health provider for current prophylaxis recommendations based on your specific itinerary.',
-  },
-  {
-    q: 'Can I see Ethiopian wolves in the wild?',
-    a: 'Yes — and more reliably than almost any other rare predator in Africa. The Bale Mountains National Park holds approximately 300 Ethiopian wolves, the world\'s largest single population. In the Web Valley and Sanetti Plateau, wolf sightings are reliable year-round at dawn. Our guides know individual animals by name. Success rate for clients on a 3-night Bale Mountains itinerary is approximately 95%.',
-  },
-  {
-    q: 'What currency does Ethiopia use?',
-    a: 'The Ethiopian Birr (ETB) is the local currency. USD and EUR are exchangeable at banks and official bureaux de change (including at Bole Airport on arrival). The official rate is typically better than street rates. Credit cards are accepted at larger hotels in Addis Ababa and some restaurants; cash is essential everywhere else. ATMs are available in Addis and regional capitals (Bahir Dar, Gondar, Mekele, Hawassa) but not in Lalibela, the Simien Mountains, or the Danakil. Carry sufficient ETB cash before leaving major towns.',
-  },
-  {
-    q: 'How much should I budget for tips?',
-    a: 'Tipping is an important part of the Ethiopian tourism economy. As a guide: specialist guide ETB 800–1,200 per day; driver ETB 400–600 per day; local site guides ETB 200–400 per visit; hotel room staff ETB 100–150 per night; restaurant staff 10% of bill. Your Sawla Tours guide will advise on appropriate amounts in each specific situation. Budget approximately USD 30–50 per person per day for tips across the journey.',
-  },
-  {
-    q: 'How far in advance should I book?',
-    a: 'For Timkat (January) and Meskel (September) festival periods, and for peak season (October–January generally), book 9–12 months in advance — accommodation in Lalibela and the Simien Mountains fills completely. For other periods, 2–4 months is usually sufficient. We can occasionally accommodate shorter notice bookings, particularly in the shoulder season (April–June). Contact us to check availability.',
-  },
-  {
-    q: 'What is the food like in Ethiopia?',
-    a: 'Ethiopian cuisine is extraordinary and utterly distinctive. The foundation is injera — a fermented teff flatbread that serves as both plate and utensil. Main dishes include doro wat (chicken stew in berbere sauce), tibs (sautéed meat), kitfo (seasoned raw beef), and excellent vegetarian dishes on fasting days (Wednesday, Friday, and throughout Orthodox Lent). The coffee ceremony — three rounds of fresh-brewed coffee, taken with popcorn or bread — is a cultural institution you should participate in wherever offered.',
-  },
-  {
-    q: 'What should I pack for Ethiopia?',
-    a: 'Pack for multiple climates in a single trip. You need: warm layers (Simien/Bale nights can be below 5°C), light long-sleeved shirts for sun and insect protection, modest clothing for church visits (shoulders and knees covered), and lightweight clothing for the Danakil or Omo Valley (hot lowlands). Key items: headlamp (essential for Erta Ale night trek), power bank, sunscreen SPF 50+ (hard to find outside Addis), and all prescription medications in sufficient supply plus extra.',
-  },
-  {
-    q: 'Do I need travel insurance?',
-    a: 'Yes — travel insurance is mandatory for all Sawla Tours clients. Your policy must cover: medical evacuation (essential for remote areas like the Danakil and Simien Mountains), trip cancellation, and any adventure activities in your itinerary. For the Simien Mountains trek, ensure your policy covers trekking above 3,000m. For the Danakil, confirm your policy covers extreme environment activities. We recommend specialist travel insurance for Ethiopia — standard policies may exclude remote-destination medical evacuation.',
-  },
-  {
-    q: 'Can I photograph the tribal people of the Omo Valley?',
-    a: 'Yes, with payment and permission. In the Omo Valley, photography of individuals is a transaction — the standard rate is ETB 50–100 per photograph, paid directly to the person photographed. This is not unusual — it is a legitimate economic arrangement that has developed over decades of tourism. Our guides manage these interactions respectfully and will brief you fully before visits. Group ceremony photography is subject to community permission obtained in advance through our Omo Valley contacts.',
-  },
-  {
-    q: 'How fit do I need to be for the Simien Mountains trek?',
-    a: 'The standard 3-day Simien trek (Sankaber → Geech → Chenek) is moderate difficulty. You are walking 12–18km per day on mountain terrain at 3,260–3,640m altitude. Reasonable cardiovascular fitness is required. No technical climbing is involved. The key challenge is altitude — if you are not acclimatised, go slowly on day one. The Ras Dashen summit extension (4,550m) is strenuous and should only be attempted by fit trekkers comfortable with multi-day high-altitude walking.',
-  },
-  {
-    q: 'Is Ethiopia suitable for families with children?',
-    a: 'Yes, with appropriate itinerary design. The northern circuit (Lalibela, Gondar, Axum) works very well for families with children 8 and older — the churches and castles are genuinely compelling for curious young people. Wildlife experiences in the Bale Mountains and Simien Mountains are excellent for children who are interested in animals. The Danakil Depression is not recommended for children under 16 due to the extreme conditions. The Omo Valley requires cultural sensitivity briefing appropriate to the child\'s age.',
-  },
-  {
-    q: 'What languages are spoken in Ethiopia?',
-    a: 'Ethiopia has over 80 languages. The official federal language is Amharic (written in the unique Ge\'ez script). English is taught in schools and widely understood in the tourism sector, major towns, and by educated Ethiopians. Our specialist guides are fluent English speakers, and we provide guides who speak the local languages in each region (Tigrinya in Tigray, Oromifa in Oromia, local languages in the Omo Valley).',
-  },
-  {
-    q: 'What is the Sawla Films advantage?',
-    a: 'Sawla Tours operates Sawla Films — an in-house documentary production company (ethiopiafilmfixer.com). This means our guides have the same visual knowledge and cultural access as professional documentary makers. Our species guides know individual Ethiopian wolves by name and have filmed their behaviour for years. Our destination content is produced from direct fieldwork. No other Ethiopian tour operator has this combination of travel expertise and production capability.',
-  },
-  {
-    q: 'Can you arrange group tours or custom private journeys?',
-    a: 'All Sawla Tours journeys are private and entirely custom-built. We do not operate group tours or fixed departures. Every itinerary is designed from scratch around the specific people travelling — their interests, pace, fitness, and what they want to feel. We accommodate groups of any size from solo travellers to large family groups or corporate parties. There is no premium for private travel with us — all our journeys are private by default.',
-  },
-  {
-    q: 'What happens if my flight is delayed or cancelled?',
-    a: 'Domestic flight delays and cancellations are a reality of Ethiopia travel. Sawla Tours builds buffer time into all itineraries to accommodate this. Our drivers and guides monitor flight status and adjust logistics accordingly. In the rare event of a significant disruption affecting the overall journey, our team will rebook and reorganise. This is one of the strongest arguments for travelling with an established local operator — we have relationships with airlines and on-the-ground contacts that enable rapid response.',
-  },
-  {
-    q: 'How do I contact Sawla Tours to start planning?',
-    a: 'Email us at explore@sawlatours.com, WhatsApp us at +251 970 578 306, or use the enquiry form at sawlatours.com/enquire. We respond within 24 hours every day of the week. The first conversation is free, informal, and non-committal — we want to understand what you are looking for before we say anything about what we offer.',
+    category: 'Practical',
+    items: [
+      { q: 'What is the best time to visit Ethiopia?', a: 'October to February is the main dry season and the most popular travel period — clear skies, accessible roads, and the best trekking and wildlife viewing conditions. March to May is shoulder season with some haze. June to September is the main rainy season — Ethiopia becomes lush and green, crowds thin out, but some roads become challenging.' },
+      { q: 'What language is spoken in Ethiopia?', a: "Amharic is the official language. English is used widely in tourism services. Guide language and regional-language support are matched to the route and confirmed for the departure rather than assumed for every team member." },
+      { q: 'What currency does Ethiopia use?', a: 'The Ethiopian birr is the local currency. Payment method, cash needs, card availability and foreign-currency rules can change, so Sawla provides current practical guidance in the final travel dossier.' },
+    ],
   },
 ]
 
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: FAQS.map(({ q, a }) => ({
+  mainEntity: faqs.flatMap(cat => cat.items.map(item => ({
     '@type': 'Question',
-    name: q,
-    acceptedAnswer: { '@type': 'Answer', text: a },
-  })),
+    name: item.q,
+    acceptedAnswer: { '@type': 'Answer', text: item.a },
+  }))),
 }
 
 export default function FAQPage() {
   return (
     <>
-      <SchemaScript data={faqSchema} />
+      <SchemaScript schema={faqSchema} />
 
-      <div className="bg-ivory pt-32 pb-24 px-6 md:px-12">
-        <div className="max-w-container mx-auto">
+      {/* HERO */}
+      <section className="relative bg-volcanic overflow-hidden pt-36 pb-20">
+        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "radial-gradient(ellipse 70% 50% at 60% 50%, #c9941a 0%, transparent 100%)" }} aria-hidden="true" />
+        <div className="container-max relative z-10 text-center max-w-3xl mx-auto">
+          <span className="label-eyebrow text-gold">Planning Your Ethiopia Journey</span>
+          <h1 className="heading-display text-ivory mt-2" style={{ fontSize: "clamp(2.5rem,5vw,4.5rem)" }}>
+            Frequently Asked Questions
+          </h1>
+          <p className="text-ivory/65 font-body mt-5 leading-relaxed max-w-xl mx-auto" style={{ fontSize: "clamp(1rem,1.2vw,1.125rem)" }}>
+            Honest answers about planning an Ethiopia trip with Sawla Tours — from first contact to the day you return home.
+          </p>
+        </div>
+      </section>
 
-          <div className="max-w-2xl mb-16">
-            <p className="label-eyebrow">Travel questions</p>
-            <h1 className="font-display font-light text-display-xl text-charcoal mb-6">
-              Everything you need<br />to know about <em className="italic text-warmgrey">Ethiopia</em>
-            </h1>
-            <p className="font-body text-body-md text-warmgrey leading-[1.82]">
-              20 questions answered by specialists who have been operating in Ethiopia since 2009. If you do not find your answer here, contact us directly — we respond within 24 hours.
-            </p>
-          </div>
-
-          <div className="space-y-px bg-sand" role="list">
-            {FAQS.map(({ q, a }, i) => (
-              <details
-                key={i}
-                className="group bg-ivory"
-                role="listitem"
-              >
-                <summary
-                  className="flex items-center justify-between gap-4 px-8 py-6 cursor-pointer list-none"
-                  aria-expanded="false"
-                >
-                  <span className="font-display font-[400] text-[1.125rem] text-charcoal pr-4">{q}</span>
-                  <span className="flex-shrink-0 w-6 h-6 border border-sand rounded-full flex items-center justify-center transition-transform duration-300 group-open:rotate-45">
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                      <path d="M6 2v8M2 6h8" stroke="#C9941A" strokeWidth="1.5" strokeLinecap="round"/>
-                    </svg>
-                  </span>
-                </summary>
-                <div className="px-8 pb-8">
-                  <p className="font-body text-body-md text-warmgrey leading-[1.82] max-w-2xl">{a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-
-          <div className="mt-20 text-center">
-            <p className="font-body text-[0.9375rem] text-warmgrey mb-6">
-              Still have a question? We respond within 24 hours.
-            </p>
-            <div className="flex items-center justify-center gap-4">
-              <a href="mailto:explore@sawlatours.com" className="btn-primary-dark">Email Us</a>
-              <a href="https://wa.me/251970578306" className="btn-outline-dark group flex items-center gap-2">
-                WhatsApp <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/></svg>
+      {/* QUICK NAVIGATION */}
+      <div className="bg-white border-b border-sand">
+        <div className="container-max py-4">
+          <div className="flex flex-wrap gap-3">
+            {faqs.map(cat => (
+              <a key={cat.category} href={"#faq-" + cat.category.toLowerCase().replace(/\s+/g, "-")}
+                className="trust-badge hover:border-gold hover:text-volcanic transition-colors cursor-pointer">
+                {cat.category}
               </a>
-            </div>
+            ))}
           </div>
         </div>
       </div>
+
+      {/* FAQ BODY */}
+      <section className="section-padding bg-ivory">
+        <div className="container-max">
+          <div className="grid lg:grid-cols-3 gap-12 lg:gap-16">
+
+            {/* Questions */}
+            <div className="lg:col-span-2 space-y-12">
+              {faqs.map(cat => (
+                <div key={cat.category} id={"faq-" + cat.category.toLowerCase().replace(/\s+/g, "-")}>
+                  <div className="flex items-center gap-4 mb-6">
+                    <span className="label-eyebrow !mb-0 text-volcanic">{cat.category}</span>
+                    <div className="flex-1 h-px bg-sand" />
+                  </div>
+                  <div className="space-y-2">
+                    {cat.items.map(item => (
+                      <details key={item.q} className="border border-sand rounded-card overflow-hidden group bg-white">
+                        <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none font-body font-medium text-volcanic hover:text-gold transition-colors"
+                          style={{ fontSize: "14px" }}>
+                          <span className="pr-4">{item.q}</span>
+                          <span className="text-gold text-xl leading-none flex-shrink-0 summary-icon group-open:rotate-45 transition-transform duration-200">+</span>
+                        </summary>
+                        <div className="px-5 pb-5 pt-2 border-t border-sand/50">
+                          <p className="text-warmgrey font-body leading-relaxed" style={{ fontSize: "14px" }}>
+                            {item.a}
+                          </p>
+                        </div>
+                      </details>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Sidebar */}
+            <aside className="lg:col-span-1">
+              <div className="sidebar-sticky space-y-5">
+                <div className="bg-volcanic rounded-card p-7 text-ivory">
+                  <div className="label-eyebrow text-gold mb-3">Still Have Questions?</div>
+                  <h3 className="font-display text-ivory font-light mb-3" style={{ fontSize: "clamp(1.25rem,2vw,1.5rem)" }}>
+                    Ask Our Ethiopia Team
+                  </h3>
+                  <p className="text-ivory/60 font-body leading-relaxed mb-6" style={{ fontSize: "0.9375rem" }}>
+                    Our Addis Ababa-based specialists review new enquiries and can answer anything not covered here.
+                  </p>
+                  <Link href="/enquire" className="btn-gold w-full justify-center mb-3">
+                    Send a Message
+                  </Link>
+                  <a href="mailto:explore@sawlatours.com"
+                    className="flex items-center justify-center gap-1.5 text-ivory/55 hover:text-gold transition-colors font-body"
+                    style={{ fontSize: "12.5px" }}>
+                    explore@sawlatours.com
+                  </a>
+                </div>
+
+                <div className="border border-sand rounded-card p-5 bg-white">
+                  <div className="label-eyebrow mb-4">Quick Facts</div>
+                  <div className="space-y-3">
+                    {[
+                      { label: "Response approach", val: "Acknowledgement within one business day" },
+                      { label: "Based in", val: "Addis Ababa, Ethiopia" },
+                      { label: "Operating since", val: "2009" },
+                      { label: "Tour type", val: "Private & tailor-made only" },
+                      { label: "Booking fee", val: "None — free to enquire" },
+                    ].map(f => (
+                      <div key={f.label} className="flex justify-between gap-4 text-sm">
+                        <span className="text-warmgrey font-body">{f.label}</span>
+                        <span className="font-body font-medium text-volcanic text-right">{f.val}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="border border-sand rounded-card p-5 bg-white">
+                  <div className="label-eyebrow mb-4">Useful Guides</div>
+                  <div className="space-y-2">
+                    {[
+                      { label: "When to Visit Ethiopia", href: "/ethiopia-travel-guide/when-to-visit-ethiopia" },
+                      { label: "Ethiopia Visa Guide", href: "/ethiopia-travel-guide/ethiopia-visa-guide" },
+                      { label: "Safety in Ethiopia", href: "/ethiopia-travel-guide/safety-in-ethiopia" },
+                      { label: "What to Pack", href: "/ethiopia-travel-guide/what-to-pack-for-ethiopia" },
+                    ].map(link => (
+                      <Link key={link.href} href={link.href}
+                        className="flex items-center justify-between text-sm group">
+                        <span className="text-warmgrey group-hover:text-gold transition-colors font-body">{link.label}</span>
+                        <svg className="text-gold/50 group-hover:text-gold transition-colors" width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      {/* BOTTOM CTA */}
+      <section className="py-16 bg-gold-faint border-t border-sand/60">
+        <div className="container-max max-w-3xl mx-auto text-center">
+          <h2 className="font-display text-volcanic font-light mb-4" style={{ fontSize: "clamp(1.5rem,3vw,2.25rem)" }}>
+            Ready to Start Planning?
+          </h2>
+          <p className="text-warmgrey font-body mb-8 max-w-lg mx-auto leading-relaxed">
+            Tell us what draws you to Ethiopia. Our Addis Ababa team will review your request and begin with an honest first conversation — no generic package and no pressure.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/enquire" className="btn-primary">Start a Conversation</Link>
+            <Link href="/tours-by-experience" className="btn-ghost">Browse Itineraries</Link>
+          </div>
+        </div>
+      </section>
     </>
   )
 }

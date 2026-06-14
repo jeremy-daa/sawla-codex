@@ -1,0 +1,65 @@
+[
+  {
+    "slug": "historic-and-cultural-tours",
+    "name": "Historic & Cultural Journeys",
+    "shortName": "Historic & Cultural",
+    "description": "Private journeys through Ethiopia’s historic north, designed around context rather than checklist sightseeing.",
+    "hubSlug": "historic-and-cultural-tours"
+  },
+  {
+    "slug": "omo-valley-community-journeys",
+    "name": "Omo Valley & Community Journeys",
+    "shortName": "Omo Valley & Community",
+    "description": "Southern journeys built around time, consent, local interpretation and realistic road planning.",
+    "hubSlug": "omo-valley-community-journeys"
+  },
+  {
+    "slug": "ethiopia-festival-tours",
+    "name": "Festival & Pilgrimage Journeys",
+    "shortName": "Festivals & Pilgrimage",
+    "description": "Seasonal journeys around Timket, Meskel, Genna and Hidar Tsion, with worship space protected.",
+    "hubSlug": "ethiopia-festival-tours"
+  },
+  {
+    "slug": "ethiopia-photography-tours",
+    "name": "Photography Expeditions",
+    "shortName": "Photography",
+    "description": "Image-led journeys planned around light, repeat access, consent, vehicle position and field logistics.",
+    "hubSlug": "ethiopia-photography-tours"
+  },
+  {
+    "slug": "ethiopia-adventure-tours",
+    "name": "Trekking & Active Journeys",
+    "shortName": "Trekking & Active",
+    "description": "Supported highland treks and remote journeys designed around terrain, season, altitude and honest comfort.",
+    "hubSlug": "ethiopia-adventure-tours"
+  },
+  {
+    "slug": "ethiopia-birdwatching-tours",
+    "name": "Birdwatching Journeys",
+    "shortName": "Birdwatching",
+    "description": "Habitat-led birding journeys for endemic-rich highlands, Rift lakes, southern drylands and forests.",
+    "hubSlug": "ethiopia-birdwatching-tours"
+  },
+  {
+    "slug": "ethiopia-wildlife-tours",
+    "name": "Wildlife Expeditions",
+    "shortName": "Wildlife",
+    "description": "Specialist journeys for endemic mammals, rare habitats and remote conservation landscapes.",
+    "hubSlug": "ethiopia-wildlife-tours"
+  },
+  {
+    "slug": "ethiopia-special-interest-tours",
+    "name": "Special-Interest Journeys",
+    "shortName": "Special Interest",
+    "description": "Purpose-built journeys for coffee, archaeology, geology, professional and academic interests.",
+    "hubSlug": "ethiopia-special-interest-tours"
+  },
+  {
+    "slug": "addis-ababa-day-tours",
+    "name": "Addis Ababa Day Tours",
+    "shortName": "Addis Ababa",
+    "description": "Private half-day, full-day and stopover programs shaped around traffic, flight times and traveler energy.",
+    "hubSlug": "addis-ababa-day-tours"
+  }
+]

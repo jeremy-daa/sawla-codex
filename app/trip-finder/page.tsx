@@ -1,78 +1,92 @@
 import type { Metadata } from 'next'
-import { buildMetadata } from '@/lib/seo'
 import Link from 'next/link'
-import { destinations, itineraries, tourStyles } from '@/data/siteData'
-import Arrow from '@/components/ui/Arrow'
+import HubHero from '@/components/hubs/HubHero'
+import HubEvidenceBar from '@/components/hubs/HubEvidenceBar'
+import HubSectionHeader from '@/components/hubs/HubSectionHeader'
+import HubCTA from '@/components/hubs/HubCTA'
+import TripWizard from '@/components/home/TripWizard'
+import SchemaScript from '@/components/ui/SchemaScript'
+import { breadcrumbSchema } from '@/lib/schema'
 
-export const metadata: Metadata = buildMetadata({
-  title: 'Find Your Ethiopia Trip',
-  description: 'Use the Sawla trip finder to choose a private Ethiopia tour by interest, duration and destination, then refine it with a specialist.',
-  path: '/trip-finder',
-  keywords: ['Ethiopia trip finder', 'plan Ethiopia tour', 'private Ethiopia itinerary', 'custom Ethiopia tour', 'Ethiopia travel planner'],
-})
+export const metadata: Metadata = {
+  title: 'Ethiopia Trip Finder: Narrow Down Your Journey | Sawla Tours',
+  description: 'Answer five practical questions about dates, duration, interests, group size and budget. Carry the result into a private Ethiopia journey enquiry.',
+  alternates: { canonical: 'https://www.sawlatours.com/trip-finder' },
+  openGraph: {
+    title: 'Ethiopia Trip Finder | Sawla Tours',
+    description: 'A short, practical route to a more useful Ethiopia journey enquiry.',
+    url: 'https://www.sawlatours.com/trip-finder',
+    type: 'website',
+    images: [{ url: '/images/og-home.jpg', width: 1200, height: 630, alt: 'Sawla Tours Ethiopia Trip Finder' }],
+  },
+}
+
+const schema = breadcrumbSchema([
+  { name: 'Home', url: 'https://www.sawlatours.com' },
+  { name: 'Trip Finder', url: 'https://www.sawlatours.com/trip-finder' },
+])
 
 export default function TripFinderPage() {
   return (
     <>
-      <section className="bg-volcanic px-6 pb-24 pt-44 text-ivory md:px-12 md:pt-52">
-        <div className="mx-auto max-w-container">
-          <p className="label-eyebrow">Trip finder</p>
-          <h1 className="mt-6 max-w-5xl font-display text-display-xl font-light leading-none">Start with the feeling, then choose the route.</h1>
-          <p className="mt-8 max-w-2xl font-body text-body-md text-ivory/60">A premium trip finder should reduce confusion without flattening Ethiopia into filters. This page gives visitors a guided path into the best-fit journey style.</p>
+      <SchemaScript schema={schema} />
+      <HubHero
+        eyebrow="Five practical questions"
+        title="Narrow the choices without pretending an algorithm knows your trip"
+        intro="The Trip Finder carries your basic preferences into the enquiry form. A specialist still reviews the route, trade-offs and current operating context."
+        breadcrumb="Trip Finder"
+        image="trip-finder-hero.jpg"
+        imageAlt="Private Ethiopia journey planning questions and map"
+        category="general"
+        primary={{ href: '#finder', label: 'Start the Trip Finder' }}
+        secondary={{ href: '/enquire', label: 'Use the full enquiry form' }}
+        facts={[
+          { value: '5', label: 'questions' },
+          { value: '2–4 min', label: 'typical time' },
+          { value: 'No login', label: 'required' },
+          { value: 'Human review', label: 'before advice' },
+        ]}
+      />
+      <HubEvidenceBar items={[
+        { title: 'No obligation', body: 'The result is a planning summary, not a booking' },
+        { title: 'No personal details yet', body: 'Contact information is added only on the enquiry form' },
+        { title: 'Preferences carried forward', body: 'Dates, duration and interests do not need retyping' },
+        { title: 'Not an instant itinerary', body: 'A specialist checks feasibility before recommending a route' },
+      ]} />
+
+      <section id="finder" className="section-padding bg-gold-faint/55 scroll-mt-28" aria-labelledby="trip-finder-heading">
+        <div className="container-max">
+          <div className="mx-auto max-w-3xl">
+            <HubSectionHeader eyebrow="Your starting point" title="Build a useful planning brief" intro="Choose the closest answer rather than trying to be precise. You can explain uncertainty and special requirements on the next step." align="center" />
+            <div className="mt-10 rounded-card border border-sand bg-white p-6 shadow-sm md:p-10"><TripWizard /></div>
+            <p className="mt-5 text-center text-sm text-warmgrey">Prefer to explain the trip in your own words? <Link href="/enquire" className="font-semibold text-gold hover:text-charcoal">Open the full enquiry form.</Link></p>
+          </div>
         </div>
       </section>
 
-      <section className="section-padding bg-ivory">
+      <section className="section-padding bg-white" aria-labelledby="finder-result-heading">
         <div className="container-max">
-          <p className="label-eyebrow">Choose your travel style</p>
-          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {tourStyles.map((style) => (
-              <Link key={style.slug} href={`/tours-by-experience/${style.slug}`} className="group border border-volcanic/10 p-8 transition duration-500 hover:-translate-y-1 hover:border-gold/50 hover:bg-gold-faint">
-                <p className="font-display text-5xl italic text-gold/70">{style.number}</p>
-                <h2 className="mt-7 font-display text-3xl text-volcanic">{style.name}</h2>
-                <p className="mt-4 font-body text-sm leading-7 text-warmgrey">{style.desc}</p>
-                <span className="mt-7 inline-flex items-center gap-2 font-body text-[0.68rem] uppercase tracking-[0.16em] text-volcanic transition-all group-hover:gap-4 group-hover:text-gold">View trips <Arrow /></span>
-              </Link>
+          <HubSectionHeader eyebrow="What happens next" title="The result improves the first conversation—it does not replace it" intro="Sawla uses your answers to reduce generic back-and-forth and focus the first response on the decisions that matter." />
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {[
+              ['01', 'Preferences are summarized', 'Your selected travel window, duration, interests, group size and budget guidance are carried into the enquiry form.'],
+              ['02', 'A specialist checks reality', 'Season, geography, travel time, accommodation, access and specialist needs are reviewed before advice is sent.'],
+              ['03', 'You receive a clear next step', 'The reply should identify a sensible route direction, missing information and any major trade-offs.'],
+            ].map(([number, title, body]) => (
+              <article key={number} className="card-luxury p-7"><span className="font-display text-4xl text-gold/45">{number}</span><h3 className="mt-5 font-display text-3xl text-charcoal">{title}</h3><p className="mt-3 text-sm leading-7 text-warmgrey">{body}</p></article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section-padding bg-[#eee6d8]">
-        <div className="container-max grid gap-12 lg:grid-cols-[0.7fr_1fr]">
-          <div>
-            <p className="label-eyebrow">Popular route lengths</p>
-            <h2 className="mt-5 font-display text-display-md font-light text-volcanic">Use duration as a planning tool, not a cage.</h2>
-            <p className="mt-6 font-body text-body-md text-warmgrey">Sawla will adjust route, pace, hotels and guiding after enquiry. These cards simply help visitors make the first decision.</p>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {['1 day', '3 days', '7 days', '8 days', '10 days', '12 days', '13 days', '14 days'].map((duration) => {
-              const count = itineraries.filter((i) => i.duration === duration).length
-              return <div key={duration} className="border border-volcanic/10 bg-ivory p-6"><p className="font-display text-4xl text-volcanic">{duration}</p><p className="mt-2 font-body text-sm text-warmgrey">{count || 'Several'} possible route{count === 1 ? '' : 's'}</p></div>
-            })}
-          </div>
+      <section className="section-padding-sm border-y border-sand bg-ivory" aria-labelledby="finder-alternative-heading">
+        <div className="container-max grid items-center gap-8 lg:grid-cols-[1fr_auto]">
+          <div><span className="label-eyebrow">Already know your direction?</span><h2 id="finder-alternative-heading" className="heading-display text-display-md text-charcoal">Browse by travel style instead</h2><p className="mt-4 max-w-3xl leading-7 text-warmgrey">Compare nine journey styles and 25 route ideas with duration, suitability, operating status and day-by-day detail.</p></div>
+          <Link href="/tours-by-experience" className="btn-ghost flex-none">Explore journey styles</Link>
         </div>
       </section>
 
-      <section className="section-padding bg-volcanic text-ivory">
-        <div className="container-max">
-          <p className="label-eyebrow">Destination anchors</p>
-          <div className="mt-10 grid gap-px bg-ivory/10 md:grid-cols-4">
-            {destinations.slice(0, 8).map((d) => (
-              <Link href={`/ethiopias-popular-destinations/${d.slug}`} key={d.slug} className="bg-volcanic p-6 transition duration-350 hover:bg-ivory/[0.04]">
-                <h3 className="font-display text-2xl text-ivory">{d.name}</h3>
-                <p className="mt-2 font-body text-xs uppercase tracking-[0.14em] text-gold">{d.bestTime}</p>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-ivory px-6 py-24 text-center">
-        <p className="label-eyebrow">Better than filters</p>
-        <h2 className="mx-auto mt-5 max-w-3xl font-display text-display-md font-light text-volcanic">Tell us what you want from Ethiopia. We will shape the route around you.</h2>
-        <Link href="/enquire" className="btn-primary-dark mt-9">Start Planning <Arrow /></Link>
-      </section>
+      <HubCTA title="A useful answer begins with an honest brief" body="Use the full enquiry form when the route is complex, your dates are fixed or you need advice on comfort, photography, mobility, dietary needs or remote travel." primary={{ href: '/enquire', label: 'Continue to enquiry' }} secondary={{ href: '/how-we-work', label: 'How planning works' }} />
     </>
   )
 }

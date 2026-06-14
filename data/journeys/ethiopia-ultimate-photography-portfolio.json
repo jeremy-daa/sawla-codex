@@ -1,0 +1,240 @@
+{
+  "slug": "ethiopia-ultimate-photography-portfolio",
+  "category": "ethiopia-photography-tours",
+  "title": "Ethiopia Ultimate Photography Portfolio",
+  "durationDays": 15,
+  "duration": "15 days / 14 nights",
+  "tagline": "Sacred architecture, desert geology and southern human stories in one demanding portfolio",
+  "route": "Addis Ababa – Lalibela – Danakil/Afar – Addis Ababa – Jinka – Lower Omo – Addis Ababa",
+  "statusType": "highly-conditional",
+  "operatingStatus": "Highly conditional — three independent modules must pass review",
+  "statusSummary": "The Lalibela, Afar and Lower Omo modules are confirmed separately. If one cannot operate, the portfolio is redesigned rather than forced.",
+  "difficulty": "Challenging",
+  "bestMonths": "November to February; festival versions by fixed date",
+  "overview": [
+    "This is Sawla’s most ambitious visual journey: living faith and architecture in Lalibela, abstract geological landscapes in Afar, and permission-led human stories in southern Ethiopia. It is designed for photographers who understand that strong work depends on repeat access, patience and contingency time.",
+    "The route is not a generic sightseeing circuit with cameras added. Vehicle position, baggage, charging, low-light work, dust protection, consent and image backup are planned as core operations."
+  ],
+  "why": [
+    "Three visually distinct modules create a coherent portfolio",
+    "Repeat sessions replace single-pass sightseeing",
+    "Photography-led logistics prioritize light, access, consent and realistic field pacing"
+  ],
+  "highlights": [
+    "Dawn and late-day Lalibela church sessions",
+    "Pilgrims, priests and architecture with respectful access",
+    "Dallol, salt flats or alternate Afar landscapes when authorized",
+    "Lower Omo visits built around local agreements",
+    "Dedicated charging and backup planning",
+    "Small private vehicle configuration for positioning"
+  ],
+  "bestFor": [
+    "Experienced photographers and visual storytellers",
+    "Small private groups with shared objectives",
+    "Travelers comfortable with conditional routing and simple camps"
+  ],
+  "notIdealFor": [
+    "Beginners seeking a relaxed first holiday",
+    "Anyone needing guaranteed subjects or weather",
+    "Travelers unwilling to lower cameras when consent changes"
+  ],
+  "days": [
+    {
+      "day": 1,
+      "title": "Arrive Addis Ababa",
+      "description": "Arrival and a photographic briefing with your Sawla photography specialist. Meet your Sawla representative, transfer privately and review the route, current operations, baggage, health considerations and the pace planned for the days ahead.",
+      "overnight": "Addis Ababa"
+    },
+    {
+      "day": 2,
+      "title": "Lalibela — Part 1",
+      "description": "Three days for the churches, liturgy, and priests in the best light. The field team protects time for patient observation, ethical positioning, charging and backups rather than promising a staged photographic outcome.",
+      "overnight": "Lalibela"
+    },
+    {
+      "day": 3,
+      "title": "Lalibela — Part 2",
+      "description": "Three days for the churches, liturgy, and priests in the best light. Vehicle position, walking distance and the order of locations are adapted to weather, current activity and the agreed photographic brief.",
+      "overnight": "Lalibela"
+    },
+    {
+      "day": 4,
+      "title": "Lalibela — Part 3",
+      "description": "Three days for the churches, liturgy, and priests in the best light. Light, consent, subject availability and repeat access guide the session; the day retains an alternative visual plan if conditions change.",
+      "overnight": "Lalibela"
+    },
+    {
+      "day": 5,
+      "title": "Omo Valley — Part 1",
+      "description": "Portrait work with the Karo, Hamar, and Mursi. The field team protects time for patient observation, ethical positioning, charging and backups rather than promising a staged photographic outcome.",
+      "overnight": "Jinka or Turmi"
+    },
+    {
+      "day": 6,
+      "title": "Omo Valley — Part 2",
+      "description": "Portrait work with the Karo, Hamar, and Mursi. Vehicle position, walking distance and the order of locations are adapted to weather, current activity and the agreed photographic brief.",
+      "overnight": "Turmi"
+    },
+    {
+      "day": 7,
+      "title": "Omo Valley — Part 3",
+      "description": "Portrait work with the Karo, Hamar, and Mursi. Light, consent, subject availability and repeat access guide the session; the day retains an alternative visual plan if conditions change.",
+      "overnight": "Jinka"
+    },
+    {
+      "day": 8,
+      "title": "Simien Mountains — Part 1",
+      "description": "Gelada and landscape photography on the escarpment. The field team protects time for patient observation, ethical positioning, charging and backups rather than promising a staged photographic outcome.",
+      "overnight": "Simien Mountains"
+    },
+    {
+      "day": 9,
+      "title": "Simien Mountains — Part 2",
+      "description": "Gelada and landscape photography on the escarpment. Vehicle position, walking distance and the order of locations are adapted to weather, current activity and the agreed photographic brief.",
+      "overnight": "Simien Mountains"
+    },
+    {
+      "day": 10,
+      "title": "Danakil — Part 1",
+      "description": "The lava lake, sulphur fields, and salt-flat landscapes. Light, consent, subject availability and repeat access guide the session; the day retains an alternative visual plan if conditions change.",
+      "overnight": "Afar field camp"
+    },
+    {
+      "day": 11,
+      "title": "Danakil — Part 2",
+      "description": "The lava lake, sulphur fields, and salt-flat landscapes. The field team protects time for patient observation, ethical positioning, charging and backups rather than promising a staged photographic outcome.",
+      "overnight": "Afar field camp"
+    },
+    {
+      "day": 12,
+      "title": "Danakil — Part 3",
+      "description": "The lava lake, sulphur fields, and salt-flat landscapes. Vehicle position, walking distance and the order of locations are adapted to weather, current activity and the agreed photographic brief.",
+      "overnight": "Semera or Afar field camp"
+    },
+    {
+      "day": 13,
+      "title": "Addis Ababa",
+      "description": "Street and market photography, and a final review. Light, consent, subject availability and repeat access guide the session; the day retains an alternative visual plan if conditions change.",
+      "overnight": "Addis Ababa"
+    },
+    {
+      "day": 14,
+      "title": "Contingency and portfolio depth day",
+      "description": "Use this protected day for repeat access, weather recovery, image backup, editing discussion or a route substitution chosen by the photography leader.",
+      "overnight": "Addis Ababa or contingency base"
+    },
+    {
+      "day": 15,
+      "title": "Depart",
+      "description": "International connection. The final transfer is planned with a protected connection buffer; a further Addis Ababa night is recommended when domestic and international tickets are separate.",
+      "overnight": "Departure"
+    }
+  ],
+  "practical": [
+    "Professional and commercial work may require additional permits.",
+    "Dust, heat, low light and domestic baggage limits shape equipment choices.",
+    "A second body, redundant storage and power strategy are strongly recommended.",
+    "The final sequence follows current access rather than brochure order."
+  ],
+  "conditional": [
+    "All Afar access and geothermal visibility",
+    "Specific worship and clergy access",
+    "Community photography and ceremonies",
+    "Weather and domestic flights"
+  ],
+  "customization": [
+    "Replace Afar with Simien or Bale wildlife",
+    "Add a professional photo leader or dedicated photography field coordinator",
+    "Slow the Lower Omo module",
+    "Build the route around Timket, Meskel or Genna"
+  ],
+  "extensions": [
+    [
+      "Bale Wildlife Photography",
+      "4 nights",
+      "Add Ethiopian wolves and Afroalpine landscapes.",
+      "/ethiopias-popular-destinations/bale-mountains-national-park"
+    ],
+    [
+      "Simien Mountains",
+      "3 nights",
+      "Add geladas and layered escarpments.",
+      "/ethiopias-popular-destinations/simien-mountain-national-park"
+    ]
+  ],
+  "faqs": [
+    {
+      "question": "Is this suitable for non-photographer partners?",
+      "answer": "It can be, but the schedule is light-led, repetitive and sometimes slow. A parallel activity plan may be added for a mixed-interest couple."
+    },
+    {
+      "question": "Are drones included?",
+      "answer": "No. Drone use requires separate current permissions and location approval and is never guaranteed."
+    },
+    {
+      "question": "Can the itinerary guarantee portraits or ceremonies?",
+      "answer": "No. Human subjects, worship and ceremonies remain permission- and circumstance-led. The guide may stop photography when it becomes intrusive."
+    },
+    {
+      "question": "Is this a fixed departure or a private journey?",
+      "answer": "It is a private sample journey rather than a scheduled group departure. Sawla adjusts the dates, sequence, accommodation, pace, guide profile and activity level around the traveler and current operating conditions."
+    },
+    {
+      "question": "What is included in the final quotation?",
+      "answer": "The final proposal states every inclusion precisely. It normally covers agreed accommodation, private transport, guiding, listed visits and operational support; international flights, insurance, visas, personal spending and tips are normally separate unless stated otherwise."
+    },
+    {
+      "question": "Can this itinerary be customized?",
+      "answer": "Yes. Extra nights, slower pacing, accommodation changes, specialist guides, domestic-flight alternatives and regional extensions can be built into the final journey."
+    }
+  ],
+  "destinations": [
+    "addis-ababa-city-tour",
+    "lalibela",
+    "danakil-depression-tour-packages",
+    "omo-valley-tribes"
+  ],
+  "inclusions": [
+    "Private transport and an experienced driver for the confirmed route",
+    "Licensed local and specialist guiding described in the final proposal",
+    "Accommodation selected for the agreed comfort level and operating conditions",
+    "Entrance fees and local coordination for the visits listed in the final itinerary",
+    "Domestic-flight coordination where flights form part of the route",
+    "Bottled or safely treated drinking water during touring and field days"
+  ],
+  "exclusions": [
+    "International flights and international airport taxes",
+    "Visa, passport, vaccination, travel-insurance and evacuation costs",
+    "Personal purchases, laundry, minibar, telephone and optional hotel services",
+    "Tips and gratuities unless the final proposal states otherwise",
+    "Optional activities, permits or specialist services not confirmed in writing",
+    "Costs caused by medical events, cancellation or changes outside the agreed scope"
+  ],
+  "responsibleTravel": [
+    "Local access is arranged through guides, hosts and responsible local systems rather than assumed.",
+    "Photography is permission-based; worship, private life, children and vulnerable moments take priority over images.",
+    "Wildlife is observed without baiting, crowding, playback abuse or guaranteed sighting language.",
+    "Waste, water, camp and vehicle practices are adapted to the sensitivity of each region.",
+    "A photograph is never more important than consent, worship, wildlife welfare or local safety.",
+    "Professional or commercial output may require additional permits and releases."
+  ],
+  "seo": {
+    "title": "15-Day Ethiopia Photography Tour | Sawla Tours",
+    "description": "A private 15-day Ethiopia photo expedition linking Danakil, Lalibela and Lower Omo with specialist logistics, ethical access and light-led pacing.",
+    "primaryKeyword": "Ethiopia photography tour",
+    "secondaryKeywords": [
+      "Danakil Lalibela Omo photo tour",
+      "Ethiopia photo expedition",
+      "professional photography tour Ethiopia"
+    ],
+    "canonical": "https://www.sawlatours.com/tours-by-experience/ethiopia-photography-tours/ethiopia-ultimate-photography-portfolio"
+  },
+  "reviewedOn": "2026-06-13",
+  "reviewCadence": "Quarterly editorial review; operating status reconfirmed for every enquiry and before confirmation.",
+  "image": {
+    "hero": "/images/tours/ethiopia-ultimate-photography-portfolio/hero.webp",
+    "heroAlt": "Ethiopia Ultimate Photography Portfolio in Ethiopia with Sawla Tours",
+    "card": "/images/tours/ethiopia-ultimate-photography-portfolio/card.webp",
+    "cardAlt": "Private Ethiopia Ultimate Photography Portfolio journey in Ethiopia"
+  }
+}

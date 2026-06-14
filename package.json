@@ -11,6 +11,8 @@
     "qa": "npm run type-check && npm run lint && npm run build"
   },
   "dependencies": {
+    "@fontsource/cormorant-garamond": "^5.2.11",
+    "@fontsource/dm-sans": "^5.2.8",
     "clsx": "^2.1.1",
     "framer-motion": "^11.15.0",
     "next": "15.5.19",

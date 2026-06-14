@@ -1,3 +1,9 @@
-export default function SchemaScript({ data }: { data: Record<string, unknown> | Record<string, unknown>[] }) {
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, '\\u003c') }} />
+// components/ui/SchemaScript.tsx
+export default function SchemaScript({ schema }: { schema: object }) {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
 }
